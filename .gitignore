@@ -1,32 +1,76 @@
-# Prerequisites
-*.d
+#include <iostream>
+#include <cstdlib>
+using namespace std;
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+int main()
+{
 
-# Precompiled Headers
-*.gch
-*.pch
+    system("cls");
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+    int value;
 
-# Fortran module files
-*.mod
-*.smod
+    do
+    {
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+        std::cout << "write any value here\n";
+        std::cout << "[1]=North, [2]=South, [3]=West, [4]=Est\n"; //Descrição redundante, porém clara para o usuario 
+        cin >> value;
 
-# Executables
-*.exe
-*.out
-*.app
+        switch (value)
+        {
+        case 1:
+        case 2:
+            cout << "Great choice! Now you're closer with the big stars\n";
+            switch (value)
+            {
+            case 1:
+                std::cout << "\nselected: North\n";
+                std::cout << "\nTerrain beyond the sun\n";
+                break;
+            case 2:
+                std::cout << "selected: South\n";
+                std::cout << "Terrain close to land\n";
+                break;
+            }                                                                   //aninhamento de switchs
+                                                                                // para um descrição mais legivel
+            switch (value)
+            {
+            case 3:
+            case 4:
+                std::cout << "Great Choice! Now you're closer with the Mother Nature \n";
+                switch (value)
+                {
+                case 3:
+                    std::cout << "selected: West\n";
+                    std::cout << "Terrain of the great mountain ranges\n";
+                    break;
+
+                case 4:
+                    std::cout << "Selected: Est\n";
+                    std::cout << "\nforest terrain of life\n";
+                    break;
+                }
+            }
+            break;
+        default:
+            std::cout << "Icorrect: try again\n";
+            break;
+        }
+        std::cout << "\nGood choice, now your destiny is beyond the mountains, let's go\n\n";    //caso queira avançar ou encerrar a quest
+        std::cout << "\nDo you want to continue ?, press (o to try again or 1 to continue)\n";
+        int again;
+        cin >> again;
+
+        if (again != 1)
+        {
+            std::cout << "Ruan away\n";
+        }
+        else if (again == 1)
+        {
+            std::cout << "okay, come on my lil homie\n"; //Naturalmente iria para um proximo nivevl
+            break;
+        }
+
+    } while (true);
+    return 0;
+}
