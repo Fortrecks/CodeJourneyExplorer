@@ -26,7 +26,4 @@ Este projeto é licenciado sob a [Licença MIT](LICENSE).
 - GitHub: [Fortrecks](https://github.com/Fortrecks)
 
 
-## Contato
-- Email: [seu_email@example.com]
-- GitHub: [seu_nome_de_usuario](https://github.com/seu_nome_de_usuario)
 
